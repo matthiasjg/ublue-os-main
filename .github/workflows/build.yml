@@ -61,6 +61,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y skopeo
+          sudo apt-get install -y buildah
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
         uses: actions/checkout@v4
