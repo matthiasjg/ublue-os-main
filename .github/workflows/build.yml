@@ -56,6 +56,11 @@ jobs:
           - build_target: kmods
             major_version: 39
     steps:
+      # Install system dependencies missing in the buildjet-4vcpu-ubuntu-2204-arm runner
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y skopeo
       # Checkout push-to-registry action GitHub repository
       - name: Checkout Push to Registry action
         uses: actions/checkout@v4
