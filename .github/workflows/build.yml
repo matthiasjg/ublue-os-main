@@ -2,8 +2,8 @@ name: build-ublue
 on:
   pull_request:
   merge_group:
-  schedule:
-    - cron: '0 15 * * *'  # 3pm UTC everyday (timed against official fedora container pushes)
+  # schedule:
+  #   - cron: '0 15 * * *'  # 3pm UTC everyday (timed against official fedora container pushes)
   workflow_dispatch:
 env:
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
@@ -11,7 +11,8 @@ env:
 jobs:
   push-ghcr:
     name: main image
-    runs-on: ubuntu-22.04
+    # runs-on: ubuntu-22.04
+    runs-on: buildjet-4vcpu-ubuntu-2204-arm
     permissions:
       contents: read
       packages: write
@@ -245,7 +246,8 @@ jobs:
   check:
     name: Check all builds successful
     if: ${{ !cancelled() }}
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
+    runs-on: buildjet-4vcpu-ubuntu-2204-arm
     needs: [push-ghcr]
     steps:
       - name: Exit on failure
