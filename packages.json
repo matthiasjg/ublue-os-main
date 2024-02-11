@@ -27,7 +27,7 @@
                 "libva-intel-driver",
                 "libva-utils",
                 "lshw",
-                "mesa-va-drivers-freeworld.x86_64",
+                "mesa-va-drivers-freeworld.aarch64",
                 "net-tools",
                 "nvme-cli",
                 "nvtop",
