@@ -22,15 +22,15 @@ jobs:
       matrix:
         image_name:
           - silverblue
-          - kinoite
-          - sericea
-          - onyx
+          # - kinoite
+          # - sericea
+          # - onyx
           - base
-          - lxqt
-          - lazurite
-          - mate
-          - vauxite
-        major_version: [38, 39]
+          # - lxqt
+          # - lazurite
+          # - mate
+          # - vauxite
+        major_version: [39]
         build_target: [nokmods, kmods]
         include:
           - major_version: 38
