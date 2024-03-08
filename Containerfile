@@ -26,7 +26,7 @@ COPY --from=ghcr.io/ublue-os/akmods:main-${FEDORA_MAJOR_VERSION} /rpms/ublue-os 
 RUN wget https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-$(rpm -E %fedora)-aarch64/ublue-os-staging-fedora-$(rpm -E %fedora)-aarch64.repo -O /etc/yum.repos.d/_copr_ublue-os_staging.repo && \
     # wget https://copr.fedorainfracloud.org/coprs/kylegospo/oversteer/repo/fedora-$(rpm -E %fedora)-aarch64/kylegospo-oversteer-fedora-$(rpm -E %fedora)-aarch64.repo -O /etc/yum.repos.d/_copr_kylegospo_oversteer.repo && \
     # /tmp/install.sh && \
-    /tmp/post-install.sh && \
+    # /tmp/post-install.sh && \
     rm -f /etc/yum.repos.d/_copr_ublue-os_staging.repo && \
     # rm -f /etc/yum.repos.d/_copr_kylegospo_oversteer.repo && \
     rm -rf /tmp/* /var/* && \
