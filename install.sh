@@ -30,7 +30,7 @@ if [ -n "${RPMFUSION_MIRROR}" ]; then
 fi
 
 # run common packages script
-/tmp/packages.sh
+# /tmp/packages.sh
 
 ## install packages direct from github
 /tmp/github-release-install.sh sigstore/cosign aarch64
